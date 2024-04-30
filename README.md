@@ -1,6 +1,7 @@
 # cmk-teamspeak
 Check_MK agent check for Teamspeak3 virtual server instances
 
+(This is a maintained fork of [thannaske/cmk-teamspeak](https://github.com/thannaske/cmk-teamspeak)
 
 ## Setup
 On your checkmk server:
@@ -11,3 +12,4 @@ On your checkmk server:
   2. Create configuration (at `/etc/check_mk/teamspeak3.cfg`), see `teamspeak3.cfg.example` for details.
 
 Then run service discovery.
+

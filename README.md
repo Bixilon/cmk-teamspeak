@@ -3,16 +3,11 @@ Check_MK agent check for Teamspeak3 virtual server instances
 
 
 ## Setup
-Install the mkp on your checkmk with:
-```bash
-omd su site
-mkp install teamspeak3-0.2.mkp
-```
+On your checkmk server:
+ 1. copy `agent_based/teamspeak.py` to `local/lib/python3/cmk/base/plugins/agent_based/teamspeak.py`
 
-Then copy `agents/plugins/Teamspeak3` to `/usr/lib/check_mk_agent/plugins/Teamspeak3` on your checkmk agent.
+ On your teamspeak server:
+  1. download Teamspeak3 agent plugin (from releases) to `/usr/lib/check_mk_agent/plugins/Teamspeak3`
+  2. Create configuration (at `/etc/check_mk/teamspeak3.cfg`), see `teamspeak3.cfg.example` for details.
 
-
-Create your configuration (destination: `/etc/check_mk/teamspeak3.cfg`)
-
-
-After that restart checkmk and the agent and rescan for services for the specific host.
+Then run service discovery.
